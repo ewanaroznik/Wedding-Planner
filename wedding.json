@@ -1,0 +1,48 @@
+{
+  "nameBride":   "Ewa",
+  "nameGroom":   "Darek",
+  "weddingDate":{
+                  "weddingYear": "2018",
+                  "weddingMonth":"July",
+                  "weddingDay":  "07"
+                },
+  "tasks":      {
+                  "taskName": "flowers to buy",
+                  "taskDate": {
+                                "taskYear": "2018",
+                                "taskMonth": "June",
+                                "taskDay":    "30"
+                              },
+                  "done": "false",
+                  "note": "roses"
+                },
+  "budget":     {
+                "categories": {
+                                "music":  {
+                                          "title":       "band",
+                                          "toPay":       "8000",
+                                          "alreadyPaid": "1000",
+                                          "dueDate":            {
+                                                                  "dueYear": "2018",
+                                                                  "dueMonth": "June",
+                                                                  "dueDay":    "30"
+                                                                }
+                                },
+                                "jewellery": {
+                                                "rings":          "1000",
+                                                "brideJewellery": "500"
+                                              }
+                              }
+                },
+  "guests":     {
+                "name":         "Karolina",
+                "surname":      "Grzybowska",
+                "sex":          "female",
+                "phoneNumber":  "666-666-666",
+                "confirmed":    "true"
+                },
+  "notes":      {
+                "noteText": "blabla",
+                "noteName": "some name"
+                }
+}

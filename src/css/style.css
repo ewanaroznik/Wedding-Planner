@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF3FF;
+    color: #F25F78;
+    font-size: 15vw;
+    font-family: 'Rum Raisin', sans-serif;
+}
+
+body footer {
+    font-size: 1rem;
+}
+
+/*Klasy dla komponentu App*/
+.template-container{
+    max-width: 1200px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 3vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quotation {
+    font-size: 20px;
+    font-weight: 700;
+    /*padding: 15px;*/
+    font-style: italic;
+    border: 2px dotted red;
+
+    
+}
+
+.logo {
+    border: 2px solid black;
+    height: 15vh;
+    width: 10vw;
+    background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/*Klasy dla komponentu Main*/
+
+.main-container {
+    display: flex;
+    align-items: center;
+    border: 5px solid red;
+    justify-content: space-around;
+}
+
+.counter {
+
+}
+
+/*Klasy dla komponentu DatePicker*/
+
+.date-picker {
+    display:flex;
+    flex-direction: column;
+}
+
+.date-picker-info {
+    margin-bottom: 15px;
+}
+
+/*Klasy dla komponentu Counter*/
+
+.deadline-timer-container {
+    display: flex;
+    border: 2px solid black;
+}
+
+.deadline-days {
+    padding: 15px;
+    border: 2px dashed black;
+}
+
+.deadline-hours{
+    padding: 15px;
+    border: 2px dashed black;
+}
+
+.deadline-minutes {
+    padding: 15px;
+    border: 2px dashed black;
+}
+
+.deadline-seconds {
+    padding: 15px;
+    border: 2px dashed black;
+}
+
+/*Klasy dla komponentu Menu*/
+
+.menu-list {
+    padding: 15px;
+    border: 2px solid black;
+}
+
+/*Klasy dla komponentu User*/
+
+.user-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-pic{
+    background-image: url("../images/wedd-couple.png");
+    border: 2px solid black;
+    height: 25vh;
+    width: 20vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 2vh 2vh;
+}
+
+.user-name {
+
+}
+
+/*Klasy dla komponentu Tasks*/
+
