@@ -1,16 +1,25 @@
+
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    background-color: #FFF3FF;
-    color: #F25F78;
-    font-size: 15vw;
-    font-family: 'Rum Raisin', sans-serif;
+    background-color: 	#FFEFD5;
+    color: #660099;
+    font-size: 1.5rem;
+    font-family: 'Rum Raisin', sans-serif !important;
 }
 
 body footer {
     font-size: 1rem;
+    margin-top: 3rem;
+}
+
+
+ .active {
+    color: red;
 }
 
 /*Klasy dla komponentu App*/
@@ -28,17 +37,17 @@ body footer {
 }
 
 .quotation {
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: 700;
     /*padding: 15px;*/
     font-style: italic;
-    border: 2px dotted red;
+    /*border: 2px dotted red;*/
 
     
 }
 
 .logo {
-    border: 2px solid black;
+    /*border: 2px solid black;*/
     height: 15vh;
     width: 10vw;
     background-image: url("../images/logo.png");
@@ -51,7 +60,7 @@ body footer {
 .main-container {
     display: flex;
     align-items: center;
-    border: 5px solid red;
+    /*border: 5px solid red;*/
     justify-content: space-around;
 }
 
@@ -74,34 +83,41 @@ body footer {
 
 .deadline-timer-container {
     display: flex;
-    border: 2px solid black;
+    /*border: 2px solid black;*/
+    font-size: 1rem;
 }
 
 .deadline-days {
     padding: 15px;
-    border: 2px dashed black;
+    /*border: 2px dashed black;*/
 }
 
 .deadline-hours{
     padding: 15px;
-    border: 2px dashed black;
+    /*border: 2px dashed black;*/
 }
 
 .deadline-minutes {
     padding: 15px;
-    border: 2px dashed black;
+    /*border: 2px dashed black;*/
 }
 
 .deadline-seconds {
     padding: 15px;
-    border: 2px dashed black;
+    /*border: 2px dashed black;*/
 }
 
 /*Klasy dla komponentu Menu*/
 
 .menu-list {
-    padding: 15px;
-    border: 2px solid black;
+    /*padding: 15px;*/
+    /*border: 2px solid black;*/
+    list-style-type: none;
+    display: flex;
+}
+
+.menu-list li {
+    padding: 1rem;
 }
 
 /*Klasy dla komponentu User*/
@@ -111,9 +127,9 @@ body footer {
     flex-direction: column;
 }
 
-.user-pic{
+.user-pic {
     background-image: url("../images/wedd-couple.png");
-    border: 2px solid black;
+    /*border: 2px solid black;*/
     height: 25vh;
     width: 20vw;
     background-repeat: no-repeat;
@@ -127,3 +143,42 @@ body footer {
 
 /*Klasy dla komponentu Tasks*/
 
+/*.tasks-category {*/
+    /*!*border: 1px solid red;*!*/
+/*}*/
+
+/*.tasks-list {*/
+    /*list-style-type: decimal;*/
+    /*font-size: 1rem;*/
+    /*margin-top: 0.25rem;*/
+    /*margin-left: 2.5rem;*/
+/*}*/
+
+
+/*.checkbox {*/
+    /*margin-left: 1rem;*/
+/*}*/
+
+/*Klasy dla komponentu Notes*/
+
+/*.notes-container {*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*font-size: 1rem;*/
+    /*margin-top: 2rem;*/
+/*}*/
+
+/*.notes-btn-add {*/
+    /*width: 1.5rem;*/
+    /*height: 1rem;*/
+/*}*/
+
+/*.notes-text {*/
+    /*width: 15rem;*/
+    /*height: 8rem;*/
+/*}*/
+
+.newNote {
+    height: 3rem;
+
+}

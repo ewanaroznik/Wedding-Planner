@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Main} from './components/Main.jsx';
-import {Tasks} from './components/Tasks.jsx';
+import {TaskList} from './components/Tasks.jsx';
 import {Template} from './Template.jsx';
+import {NotesList} from './components/Notes.jsx';
 import moment from 'moment';
 import { Router,
     Route,
@@ -22,9 +23,9 @@ class App extends React.Component {
     render() {
         return <Router history={hashHistory}>
             <Route path='/' component={Template}>
-                {/*<IndexRoute component={Main} startDate={moment()}/>       */}
                 <IndexRoute component={Main} startDate={moment()} />)}/>
-                <Route path='/tasks' component={Tasks} />
+                <Route path='/tasks' component={TaskList} />
+                <Route path='/notes' component={NotesList} />
                 <Route path='*' component={NotFound} />
             </Route>
         </Router>;
@@ -32,13 +33,3 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
-
-{/*<Route*/}
-    {/*path="/my/path"*/}
-    {/*render={(routeProps) => (*/}
-        {/*<MyComponent {...routeProps} {...props} />*/}
-    {/*)}*/}
-
-{/*/>*/}
-
-{/*render={(props) => (<Component {...props} title="asdf" />)}*/}

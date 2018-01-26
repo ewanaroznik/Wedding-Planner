@@ -44,7 +44,7 @@ export class Counter extends React.Component{
         const info = <span>Soon!</span>;
 
         const startOfHour = d.startOf('day');
-        console.log(startOfHour);
+        // console.log(startOfHour);
 
         const futureTime = (
             <div>

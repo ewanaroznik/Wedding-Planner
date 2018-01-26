@@ -16,7 +16,7 @@ export class WeddingDatePicker extends React.Component{
     }
 
     handleChange(date) {
-       this.props.route.sendDate(date.utc())
+       this.props.sendDate(date.utc())
     }
 
     render() {
