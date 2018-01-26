@@ -5,8 +5,11 @@ export class NotesList extends React.Component{
         super(props);
         this.state={
             text: "",
+            notes: [],
+            justSubmited: false
         };
-        this.changeText = this.changeText.bind(this)
+        this.changeText = this.changeText.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     changeText(newText){
@@ -15,13 +18,34 @@ export class NotesList extends React.Component{
         })
     }
 
+    handleSubmit(e){
+        e.preventDefault();
+        console.log(e);
+        this.setState({
+            notes: [...this.state.notes, this.state.text],
+            text: '',
+            justSubmited: true
+        })
+    }
+
     render() {
 
+        let notes = this.state.notes.map((e,i) => {
+            return <div>
+                <li key={i}>{e}</li>
+                <input type="checkbox"/>
+            </div>
+        });
+
         return (<form onSubmit={this.handleSubmit}>
-                    <label> Here put your new note's text:
+                    <label>
+                        <legend>Here put your new note's text:</legend>
                         <NoteText onChange={this.changeText}/>
-                        <NewNote text={this.state.text}/>
+                        <NewNote justSubmited={this.state.justSubmited} text={this.state.text}/>
                         <input type="submit" value="Submit" />
+                        <ul className="notes-list">
+                            {notes}
+                        </ul>
                     </label>
                 </form>)
     }
@@ -37,21 +61,26 @@ class NoteText extends React.Component{
         this.handleTextChange = this.handleTextChange.bind(this);
     }
 
+    componentWillReceiveProps(){
+        this.setState({
+            text: this.props.justSubmited ? '' : this.state.text
+        })
+    }
+
     handleTextChange(e){
         this.setState({
-            text: e.currentTarget.value
+            text: this.props.justSubmited ? '' : e.currentTarget.value
         }, ()=>{
             this.props.onChange(this.state.text);
         })
     }
     render(){
-        return <textarea className="text-field" value={this.state.text} onChange={this.handleTextChange}>.</textarea>
+        return <textarea rows="10" cols="20" className="text-field" value={this.state.text} onChange={this.handleTextChange}>.</textarea>
     }
 }
 
-
 class NewNote extends React.Component {
     render() {
-        return <span className="new-note">{this.props.text}</span>
+        return <div className="new-note">{this.props.text}</div>
     }
 }

@@ -8,8 +8,11 @@ export class Template extends React.Component {
     return <div className="template-container">
         <header className="header">
             <div className="logo"></div>
-            <div className="quotation">Love is... the excitement of planning things together and the excitement of doing things together.
-            (author: unknown)</div>
+            <div className="quotation">
+                <span>
+                Love is... the excitement of planning things together and the excitement of doing things together.
+            </span>
+            <span className="quotation-author">(author: unknown)</span></div>
         </header>
         <div className="menu">
             <h2>Go to ...</h2>

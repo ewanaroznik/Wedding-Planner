@@ -26,9 +26,9 @@ export class WeddingDatePicker extends React.Component{
                 <DatePicker
                     selected={this.state.startDate}
                     onChange={this.handleChange}
-                    showTimeSelect
-                    timeFormat="HH:mm"
-                    timeIntervals={15}
+                    // showTimeSelect
+                    // timeFormat="HH:mm"
+                    // timeIntervals={15}
                     dateFormat="LLL"
                     className="date-picker-calendar"
                 />

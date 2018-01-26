@@ -17,7 +17,6 @@ body footer {
     margin-top: 3rem;
 }
 
-
  .active {
     color: red;
 }
@@ -39,15 +38,16 @@ body footer {
 .quotation {
     font-size: 1.5rem;
     font-weight: 700;
-    /*padding: 15px;*/
     font-style: italic;
-    /*border: 2px dotted red;*/
+    display: flex;
+    flex-direction: column;
+}
 
-    
+.quotation-author {
+    font-size: 0.80rem;
 }
 
 .logo {
-    /*border: 2px solid black;*/
     height: 15vh;
     width: 10vw;
     background-image: url("../images/logo.png");
@@ -60,7 +60,6 @@ body footer {
 .main-container {
     display: flex;
     align-items: center;
-    /*border: 5px solid red;*/
     justify-content: space-around;
 }
 
@@ -83,35 +82,29 @@ body footer {
 
 .deadline-timer-container {
     display: flex;
-    /*border: 2px solid black;*/
     font-size: 1rem;
 }
 
 .deadline-days {
     padding: 15px;
-    /*border: 2px dashed black;*/
 }
 
 .deadline-hours{
     padding: 15px;
-    /*border: 2px dashed black;*/
 }
 
 .deadline-minutes {
     padding: 15px;
-    /*border: 2px dashed black;*/
 }
 
 .deadline-seconds {
     padding: 15px;
-    /*border: 2px dashed black;*/
+
 }
 
 /*Klasy dla komponentu Menu*/
 
 .menu-list {
-    /*padding: 15px;*/
-    /*border: 2px solid black;*/
     list-style-type: none;
     display: flex;
 }
@@ -129,7 +122,6 @@ body footer {
 
 .user-pic {
     background-image: url("../images/wedd-couple.png");
-    /*border: 2px solid black;*/
     height: 25vh;
     width: 20vw;
     background-repeat: no-repeat;
@@ -161,11 +153,35 @@ body footer {
 
 /*Klasy dla komponentu Notes*/
 
-.newNote {
-    font-size: 0.5rem;
-
+.new-note {
+    font-size: 0.75rem;
+    min-height: 5rem;
+    max-width: 10rem;
+    border: 0.2rem solid red;
+    background-color: #fff;
+    overflow: scroll;
+    font-family: 'Caveat', cursive,sans-serif!important;
+    word-break: break-all;
 }
 
 .text-field {
-    margin-right: 1rem;
+    margin: 1rem;
+    height: auto;
 }
+
+.notes-list{
+    display: flex;
+}
+
+.notes-list li{
+    font-size: 0.75rem;
+    margin: 0.25rem;
+    height: 5rem;
+    width: 10rem;
+    border: 0.2rem solid greenyellow;
+    background-color: #fff;
+    overflow: auto;
+    font-family: 'Caveat', cursive,sans-serif!important;
+    word-break: break-all;
+}
+

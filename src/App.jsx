@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Main} from './components/Main.jsx';
-import {TaskList} from './components/Tasks.jsx';
-import {Template} from './Template.jsx';
-import {NotesList} from './components/Notes.jsx';
+import { Main } from './components/Main.jsx';
+import { TaskList } from './components/Tasks.jsx';
+import { Template } from './Template.jsx';
+import { NotesList } from './components/Notes.jsx';
 import moment from 'moment';
 import { Router,
     Route,
