@@ -161,24 +161,11 @@ body footer {
 
 /*Klasy dla komponentu Notes*/
 
-/*.notes-container {*/
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*font-size: 1rem;*/
-    /*margin-top: 2rem;*/
-/*}*/
-
-/*.notes-btn-add {*/
-    /*width: 1.5rem;*/
-    /*height: 1rem;*/
-/*}*/
-
-/*.notes-text {*/
-    /*width: 15rem;*/
-    /*height: 8rem;*/
-/*}*/
-
 .newNote {
-    height: 3rem;
+    font-size: 0.5rem;
 
+}
+
+.text-field {
+    margin-right: 1rem;
 }

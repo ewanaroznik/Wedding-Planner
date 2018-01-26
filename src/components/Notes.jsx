@@ -4,7 +4,7 @@ export class NotesList extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            text: "bla",
+            text: "",
         };
         this.changeText = this.changeText.bind(this)
     }
@@ -17,11 +17,13 @@ export class NotesList extends React.Component{
 
     render() {
 
-        return (<div>
-                    <NoteText onChange={this.changeText}/>
-                    <NewNote text={this.state.text}/>
-
-                </div>)
+        return (<form onSubmit={this.handleSubmit}>
+                    <label> Here put your new note's text:
+                        <NoteText onChange={this.changeText}/>
+                        <NewNote text={this.state.text}/>
+                        <input type="submit" value="Submit" />
+                    </label>
+                </form>)
     }
 }
 
@@ -30,26 +32,26 @@ class NoteText extends React.Component{
     constructor(props) {
         super(props);
         this.state={
-          text: null,
+          text: '',
         };
-
         this.handleTextChange = this.handleTextChange.bind(this);
     }
 
     handleTextChange(e){
-       const text = e.target.value;
-        this.props.onChange(text);
+        this.setState({
+            text: e.currentTarget.value
+        }, ()=>{
+            this.props.onChange(this.state.text);
+        })
     }
-
     render(){
-        return <textarea value={text} onChange={this.handleTextChange}>.</textarea>
+        return <textarea className="text-field" value={this.state.text} onChange={this.handleTextChange}>.</textarea>
     }
 }
 
 
 class NewNote extends React.Component {
     render() {
-        text = this.props.text;
-        return <textarea className="new-note">{text}</textarea>
+        return <span className="new-note">{this.props.text}</span>
     }
 }
