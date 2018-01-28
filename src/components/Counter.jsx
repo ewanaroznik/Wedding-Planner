@@ -34,21 +34,27 @@ export class Counter extends React.Component{
         var dayOfChoice = d;
         // console.log("sprawdź aktualny dzień miesiąca", currentDayOfMonth);
         // console.log('sprawdż wybrany dzień miesiąca', dayOfChoice);
-        //
-        // console.log('Difference is ', dayOfChoice.diff(this.state.current, 'days'), 'days');
 
         var currentHour = this.state.current.hour();
         // console.log("pokaż aktualną godzinę dnia", currentHour);
         // console.log('Difference is ', d.diff(this.state.current, 'hour'), 'hour');
 
-        const info = <span>Soon!</span>;
+        // var now = moment(new Date()); //todays date
+        // var end = moment(d); // another date
+        // var duration = moment.duration(now.diff(end));
+        // var days = duration.asDays();
+        // console.log(days)
 
-        const startOfHour = d.startOf('day');
-        // console.log(startOfHour);
+        const duration = moment.duration(d.diff(this.state.current, 'hour'));
+        const hours = duration.asHours();
+        console.log(hours);
+
+
 
         const futureTime = (
             <div>
-                <div>Your big day is in ...</div>
+                <div>Your big day is on </div>
+                <span>{showDate.toString()}, so in: </span>
                 <div className="deadline-timer-container">
                     <div className="deadline-days">{d.diff(this.state.current, 'days')} days</div>
                     <div className="deadline-hours">{d.diff(this.state.current, 'hour')} hours</div>

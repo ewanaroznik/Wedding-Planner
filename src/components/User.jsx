@@ -28,7 +28,5 @@ export class User extends React.Component{
                        onChange={this.handleNameChange}
                         />
             </div>
-
-
     }
 }
