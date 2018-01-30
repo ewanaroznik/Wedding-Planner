@@ -27,7 +27,7 @@ export class TaskList extends React.Component{
                 <h3>Get prepared task by task</h3>
                 <div className="tasks-container">
                     <form onSubmit={this.onSubmit}>
-                        <legend className="adding-tasks">Add new tasks here:</legend>
+                        <legend className="adding-tasks">Add new task here:</legend>
                         <input value={this.state.term} onChange={this.onChange} />
                         <button>Submit</button>
                     </form>

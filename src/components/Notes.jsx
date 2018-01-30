@@ -37,7 +37,8 @@ export class NotesList extends React.Component{
             </div>
         });
 
-        return (<form onSubmit={this.handleSubmit}>
+        return (
+                <form onSubmit={this.handleSubmit}>
                     <label>
                         <legend>Note down important information or contacts:</legend>
                         <NoteText onChange={this.changeText}/>
@@ -47,7 +48,9 @@ export class NotesList extends React.Component{
                             {notes}
                         </ul>
                     </label>
-                </form>)
+                </form>
+
+            )
     }
 }
 

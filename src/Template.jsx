@@ -18,13 +18,13 @@ export class Template extends React.Component {
             <h2>Go to ...</h2>
             <ul className="menu-list">
                 <li>
-                    <IndexLink to="/" activeClassName="active">Main</IndexLink>
+                    <IndexLink to="/" className='indexlink' activeClassName="active">Main</IndexLink>
                 </li>
                 <li>
-                    <IndexLink to="/tasks" activeClassName="active">Tasks</IndexLink>
+                    <IndexLink to="/tasks" className='indexlink' activeClassName="active">Tasks</IndexLink>
                 </li>
                 <li>
-                    <IndexLink to="/notes" activeClassName="active">Notes</IndexLink>
+                    <IndexLink to="/notes" className='indexlink' activeClassName="active">Notes</IndexLink>
                 </li>
             </ul>
             {this.props.children}

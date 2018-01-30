@@ -57,7 +57,7 @@ export class Counter extends React.Component{
         const futureTime = (
             <div>
                 <div>Your big day is on </div>
-                <span>{showDate.toString()}, so in: </span>
+                <div className="showdate">{showDate.toString()}, so in: </div>
                 <div className="deadline-timer-container">
                     <div className="deadline-days">{d.diff(this.state.current, 'days')} days</div>
                     <div className="deadline-hours">{d.diff(this.state.current, 'hour')} hours</div>

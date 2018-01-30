@@ -21,6 +21,10 @@ body footer {
     color: red;
 }
 
+ .indexlink{
+     text-decoration: none;
+ }
+
 /*Klasy dla komponentu App*/
 .template-container{
     max-width: 1200px;
@@ -99,7 +103,12 @@ body footer {
 
 .deadline-seconds {
     padding: 15px;
+}
 
+.showdate {
+    font-size: 1.25rem;
+    margin-top: 0.75rem;
+    text-decoration: underline;
 }
 
 /*Klasy dla komponentu Menu*/
@@ -133,6 +142,8 @@ body footer {
 
 }
 
+/*klasy dla komponentu Notes*/
+
 .new-note {
     font-size: 0.75rem;
     min-height: 5rem;
@@ -165,7 +176,6 @@ body footer {
     font-family: 'Caveat', cursive,sans-serif!important;
     word-break: break-all;
     color: black;
-
 }
 
 /*Klasy dla komponentu Tasks*/
