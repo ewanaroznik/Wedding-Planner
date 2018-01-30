@@ -39,7 +39,7 @@ export class NotesList extends React.Component{
 
         return (<form onSubmit={this.handleSubmit}>
                     <label>
-                        <legend>Here put your new note's text:</legend>
+                        <legend>Note down important information or contacts:</legend>
                         <NoteText onChange={this.changeText}/>
                         <NewNote justSubmited={this.state.justSubmited} text={this.state.text}/>
                         <input type="submit" value="Submit" />

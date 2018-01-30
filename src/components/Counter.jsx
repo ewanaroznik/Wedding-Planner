@@ -39,14 +39,17 @@ export class Counter extends React.Component{
         // console.log("pokaż aktualną godzinę dnia", currentHour);
         // console.log('Difference is ', d.diff(this.state.current, 'hour'), 'hour');
 
+        const showDate = d.format("MMMM, Do, YYYY");
+        console.log(showDate);
+
         // var now = moment(new Date()); //todays date
         // var end = moment(d); // another date
         // var duration = moment.duration(now.diff(end));
         // var days = duration.asDays();
         // console.log(days)
 
-        const duration = moment.duration(d.diff(this.state.current, 'hour'));
-        const hours = duration.asHours();
+        const duration = moment.duration(this.state.current.diff(d, 'hour'));
+        const hours = duration.hours();
         console.log(hours);
 
 
